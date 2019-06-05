@@ -29,7 +29,14 @@ public class DemoResource {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public String getInfoForAll() {
-    return "{\"msg\":\"Hello anonymous person this is a response from testing the application\"}";
+    return "{\"msg\":\"Hello anonymous\"}";
+  }
+  
+  @GET
+  @Path("testing")
+  @Produces(MediaType.APPLICATION_JSON)
+  public String getInfotest() {
+    return "{\"msg\":\"new method implemented for testing here\"}";
   }
 
   //Just to verify if the database is setup
