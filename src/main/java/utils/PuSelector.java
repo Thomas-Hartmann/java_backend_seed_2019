@@ -72,8 +72,7 @@ public class PuSelector {
     }
 
     //Only reason to give persistence file another name is that it must NOT be git-ignored, which is what we usually do with persistence.xml
-    props.setProperty(PersistenceUnitProperties.ECLIPSELINK_PERSISTENCE_XML,
-            "META-INF/persistence-for-all.xml");
+    props.setProperty(PersistenceUnitProperties.ECLIPSELINK_PERSISTENCE_XML,"META-INF/persistence-for-all.xml");
 
     emf = Persistence.createEntityManagerFactory("DO_NOT_RENAME_ME", props);
     return emf;
